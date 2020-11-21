@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/listImage"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="330dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel_bold"
+        android:gravity="center"
+        android:text="@string/title"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/listImage"
+        app:layout_constraintTop_toTopOf="@+id/listImage" />
+
+    <TextView
+        android:id="@+id/listPublished"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/published_date"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/listImage"
+        app:layout_constraintStart_toStartOf="@+id/listTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

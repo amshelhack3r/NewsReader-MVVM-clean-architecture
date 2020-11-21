@@ -1,15 +1,15 @@
 package com.example.nytimesreader.ui.viewmodel
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.nytimesreader.util.EventManager
 
-class ViewModelFactory(val eventManager: EventManager):ViewModelProvider.Factory{
+class ViewModelFactory(val context: Context):ViewModelProvider.Factory{
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
-            return MainViewModel(
-                eventManager
-            ) as T
+        if (modelClass.isAssignableFrom(BookmarkViewModel::class.java)) {
+            return BookmarkViewModel(context) as T
+        }else if (modelClass.isAssignableFrom(TopStoriesViewModel::class.java)){
+            return TopStoriesViewModel(context) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
