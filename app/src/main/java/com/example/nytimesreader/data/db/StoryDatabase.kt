@@ -6,6 +6,8 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.nytimesreader.data.model.Story
 
+
+//initialize a room database
 @Database(entities = arrayOf(Story::class), version = 1, exportSchema = false)
 abstract class StoryDatabase:RoomDatabase() {
      abstract  fun storyDao():StoryDao
